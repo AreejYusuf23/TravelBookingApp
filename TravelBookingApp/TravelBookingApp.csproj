@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{682E1840-9C66-4B0B-9385-123FF9F46C51}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>TravelBookingApp</RootNamespace>
+    <AssemblyName>TravelBookingApp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BookingAdminEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingAdminEdit.Designer.cs">
+      <DependentUpon>BookingAdminEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingManagment.Designer.cs">
+      <DependentUpon>BookingManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DestinationManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DestinationManagment.Designer.cs">
+      <DependentUpon>DestinationManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empolyer\BookFlightsEmployer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empolyer\BookFlightsEmployer.Designer.cs">
+      <DependentUpon>BookFlightsEmployer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empolyer\EmployerDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empolyer\EmployerDashboard.Designer.cs">
+      <DependentUpon>EmployerDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empolyer\FlightDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empolyer\FlightDetails.Designer.cs">
+      <DependentUpon>FlightDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlightMAdminEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightMAdminEdit.Designer.cs">
+      <DependentUpon>FlightMAdminEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FlightManagment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlightManagment.Designer.cs">
+      <DependentUpon>FlightManagment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessagesListAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessagesListAdmin.Designer.cs">
+      <DependentUpon>MessagesListAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceManagmentAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceManagmentAdmin.Designer.cs">
+      <DependentUpon>ServiceManagmentAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Traveller\BookFlight.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Traveller\BookFlight.Designer.cs">
+      <DependentUpon>BookFlight.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserManagmentListAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagmentListAdmin.Designer.cs">
+      <DependentUpon>UserManagmentListAdmin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BookingAdminEdit.resx">
+      <DependentUpon>BookingAdminEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingManagment.resx">
+      <DependentUpon>BookingManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DestinationManagment.resx">
+      <DependentUpon>DestinationManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empolyer\BookFlightsEmployer.resx">
+      <DependentUpon>BookFlightsEmployer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empolyer\EmployerDashboard.resx">
+      <DependentUpon>EmployerDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empolyer\FlightDetails.resx">
+      <DependentUpon>FlightDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightMAdminEdit.resx">
+      <DependentUpon>FlightMAdminEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlightManagment.resx">
+      <DependentUpon>FlightManagment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessagesListAdmin.resx">
+      <DependentUpon>MessagesListAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceManagmentAdmin.resx">
+      <DependentUpon>ServiceManagmentAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Traveller\BookFlight.resx">
+      <DependentUpon>BookFlight.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserManagmentListAdmin.resx">
+      <DependentUpon>UserManagmentListAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
