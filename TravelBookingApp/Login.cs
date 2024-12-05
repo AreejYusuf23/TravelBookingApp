@@ -15,8 +15,15 @@ namespace TravelBookingApp
         public Login()
         {
             InitializeComponent();
+            PopulateRoles(); // Call the method to populate roles
         }
-
+        private void PopulateRoles()
+        {
+            roleComboBox.Items.Add("Employer");
+            roleComboBox.Items.Add("Traveller");
+            roleComboBox.Items.Add("Admin");
+            roleComboBox.SelectedIndex = 0; // Set default selected item
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 

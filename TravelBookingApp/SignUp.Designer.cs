@@ -34,22 +34,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.firstNameTextBox = new System.Windows.Forms.TextBox();
+            this.emailTextBox = new System.Windows.Forms.TextBox();
+            this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.lastNameTextBox = new System.Windows.Forms.TextBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.nationalityTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.passportNumberTextBox = new System.Windows.Forms.TextBox();
+            this.cprTextBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.groupBox1.SuspendLayout();
+            this.roleComboBox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -114,29 +111,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // firstNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(238, 102);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 26);
-            this.textBox1.TabIndex = 6;
+            this.firstNameTextBox.Location = new System.Drawing.Point(238, 102);
+            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.firstNameTextBox.Name = "firstNameTextBox";
+            this.firstNameTextBox.Size = new System.Drawing.Size(224, 26);
+            this.firstNameTextBox.TabIndex = 6;
             // 
-            // textBox2
+            // emailTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(238, 175);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(208, 26);
-            this.textBox2.TabIndex = 7;
+            this.emailTextBox.Location = new System.Drawing.Point(238, 175);
+            this.emailTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Size = new System.Drawing.Size(208, 26);
+            this.emailTextBox.TabIndex = 7;
             // 
-            // textBox3
+            // phoneNumberTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(238, 248);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(208, 26);
-            this.textBox3.TabIndex = 8;
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(238, 248);
+            this.phoneNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.phoneNumberTextBox.Name = "phoneNumberTextBox";
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(208, 26);
+            this.phoneNumberTextBox.TabIndex = 8;
             // 
             // label6
             // 
@@ -148,29 +145,29 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Nationality";
             // 
-            // textBox4
+            // lastNameTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(488, 100);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(224, 26);
-            this.textBox4.TabIndex = 10;
+            this.lastNameTextBox.Location = new System.Drawing.Point(488, 100);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.lastNameTextBox.Name = "lastNameTextBox";
+            this.lastNameTextBox.Size = new System.Drawing.Size(224, 26);
+            this.lastNameTextBox.TabIndex = 10;
             // 
-            // textBox5
+            // usernameTextBox
             // 
-            this.textBox5.Location = new System.Drawing.Point(488, 174);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(208, 26);
-            this.textBox5.TabIndex = 11;
+            this.usernameTextBox.Location = new System.Drawing.Point(488, 174);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(208, 26);
+            this.usernameTextBox.TabIndex = 11;
             // 
-            // textBox6
+            // nationalityTextBox
             // 
-            this.textBox6.Location = new System.Drawing.Point(488, 249);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(208, 26);
-            this.textBox6.TabIndex = 12;
+            this.nationalityTextBox.Location = new System.Drawing.Point(488, 249);
+            this.nationalityTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.nationalityTextBox.Name = "nationalityTextBox";
+            this.nationalityTextBox.Size = new System.Drawing.Size(208, 26);
+            this.nationalityTextBox.TabIndex = 12;
             // 
             // label7
             // 
@@ -182,21 +179,21 @@
             this.label7.TabIndex = 13;
             this.label7.Text = "Last Name";
             // 
-            // textBox7
+            // passportNumberTextBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(238, 320);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(208, 26);
-            this.textBox7.TabIndex = 14;
+            this.passportNumberTextBox.Location = new System.Drawing.Point(238, 320);
+            this.passportNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.passportNumberTextBox.Name = "passportNumberTextBox";
+            this.passportNumberTextBox.Size = new System.Drawing.Size(208, 26);
+            this.passportNumberTextBox.TabIndex = 14;
             // 
-            // textBox8
+            // cprTextBox
             // 
-            this.textBox8.Location = new System.Drawing.Point(488, 320);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(208, 26);
-            this.textBox8.TabIndex = 15;
+            this.cprTextBox.Location = new System.Drawing.Point(488, 320);
+            this.cprTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cprTextBox.Name = "cprTextBox";
+            this.cprTextBox.Size = new System.Drawing.Size(208, 26);
+            this.cprTextBox.TabIndex = 15;
             // 
             // label8
             // 
@@ -217,62 +214,35 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // groupBox1
+            // roleComboBox
             // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(238, 378);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(459, 58);
-            this.groupBox1.TabIndex = 18;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Role";
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(256, 20);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(93, 24);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Traveller";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(87, 20);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(100, 24);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Employer";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.roleComboBox.FormattingEnabled = true;
+            this.roleComboBox.Location = new System.Drawing.Point(368, 374);
+            this.roleComboBox.Name = "roleComboBox";
+            this.roleComboBox.Size = new System.Drawing.Size(200, 28);
+            this.roleComboBox.TabIndex = 19;
+            this.roleComboBox.SelectedIndexChanged += new System.EventHandler(this.roleComboBox_SelectedIndexChanged);
             // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 574);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.roleComboBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.cprTextBox);
+            this.Controls.Add(this.passportNumberTextBox);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.nationalityTextBox);
+            this.Controls.Add(this.usernameTextBox);
+            this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.phoneNumberTextBox);
+            this.Controls.Add(this.emailTextBox);
+            this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -283,8 +253,6 @@
             this.Name = "SignUp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sign up";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,20 +266,18 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox firstNameTextBox;
+        private System.Windows.Forms.TextBox emailTextBox;
+        private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox lastNameTextBox;
+        private System.Windows.Forms.TextBox usernameTextBox;
+        private System.Windows.Forms.TextBox nationalityTextBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox passportNumberTextBox;
+        private System.Windows.Forms.TextBox cprTextBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.ComboBox roleComboBox;
     }
 }

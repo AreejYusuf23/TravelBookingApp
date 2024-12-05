@@ -102,6 +102,14 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="HappyAirLineDataSet.cs">
+      <DependentUpon>HappyAirLineDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="HappyAirLineDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HappyAirLineDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Message.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +155,7 @@
     <Compile Include="Traveller\BookFlight.Designer.cs">
       <DependentUpon>BookFlight.cs</DependentUpon>
     </Compile>
+    <Compile Include="User.cs" />
     <Compile Include="UserManagmentListAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -214,6 +223,17 @@
     <EmbeddedResource Include="UserManagmentListAdmin.resx">
       <DependentUpon>UserManagmentListAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="HappyAirLineDataSet.xsc">
+      <DependentUpon>HappyAirLineDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HappyAirLineDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HappyAirLineDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HappyAirLineDataSet.xss">
+      <DependentUpon>HappyAirLineDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
