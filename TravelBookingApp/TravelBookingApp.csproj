@@ -140,6 +140,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.cs" />
     <Compile Include="Traveller\BookFlight.cs">
       <SubType>Form</SubType>
     </Compile>
