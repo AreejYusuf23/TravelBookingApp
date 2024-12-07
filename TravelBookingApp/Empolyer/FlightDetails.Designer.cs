@@ -74,6 +74,7 @@
             this.Controls.Add(this.label14);
             this.Controls.Add(this.button7);
             this.Name = "FlightDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FlightDetails";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

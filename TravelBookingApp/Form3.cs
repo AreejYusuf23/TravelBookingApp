@@ -194,7 +194,7 @@ namespace TravelBookingApp
 
         private void sendMessageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           new Message().Show();
+          // new Message().Show();
         }
 
         private void inboxToolStripMenuItem_Click(object sender, EventArgs e)

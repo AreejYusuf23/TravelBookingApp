@@ -20,13 +20,11 @@ namespace TravelBookingApp {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("HappyAirLineDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("AirLineDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class HappyAirLineDataSet : global::System.Data.DataSet {
+    public partial class AirLineDataSet : global::System.Data.DataSet {
         
         private AccountDataTable tableAccount;
-        
-        private AirportDataTable tableAirport;
         
         private Backup_RecordDataTable tableBackup_Record;
         
@@ -41,8 +39,6 @@ namespace TravelBookingApp {
         private MessageDataTable tableMessage;
         
         private PaymentDataTable tablePayment;
-        
-        private PlaneDataTable tablePlane;
         
         private ReceiptDataTable tableReceipt;
         
@@ -66,13 +62,9 @@ namespace TravelBookingApp {
         
         private global::System.Data.DataRelation relationUser_Booking_fk;
         
-        private global::System.Data.DataRelation relationAirport_Destination_fk;
-        
         private global::System.Data.DataRelation relationDestination_Flight_fk;
         
         private global::System.Data.DataRelation relationCard_Payment_fk;
-        
-        private global::System.Data.DataRelation relationFlight_Plane_fk;
         
         private global::System.Data.DataRelation relationPayment_Reciept_fk;
         
@@ -86,7 +78,7 @@ namespace TravelBookingApp {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public HappyAirLineDataSet() {
+        public AirLineDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -97,7 +89,7 @@ namespace TravelBookingApp {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected HappyAirLineDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected AirLineDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -112,9 +104,6 @@ namespace TravelBookingApp {
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
                 if ((ds.Tables["Account"] != null)) {
                     base.Tables.Add(new AccountDataTable(ds.Tables["Account"]));
-                }
-                if ((ds.Tables["Airport"] != null)) {
-                    base.Tables.Add(new AirportDataTable(ds.Tables["Airport"]));
                 }
                 if ((ds.Tables["Backup_Record"] != null)) {
                     base.Tables.Add(new Backup_RecordDataTable(ds.Tables["Backup_Record"]));
@@ -136,9 +125,6 @@ namespace TravelBookingApp {
                 }
                 if ((ds.Tables["Payment"] != null)) {
                     base.Tables.Add(new PaymentDataTable(ds.Tables["Payment"]));
-                }
-                if ((ds.Tables["Plane"] != null)) {
-                    base.Tables.Add(new PlaneDataTable(ds.Tables["Plane"]));
                 }
                 if ((ds.Tables["Receipt"] != null)) {
                     base.Tables.Add(new ReceiptDataTable(ds.Tables["Receipt"]));
@@ -180,16 +166,6 @@ namespace TravelBookingApp {
         public AccountDataTable Account {
             get {
                 return this.tableAccount;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public AirportDataTable Airport {
-            get {
-                return this.tableAirport;
             }
         }
         
@@ -260,16 +236,6 @@ namespace TravelBookingApp {
         public PaymentDataTable Payment {
             get {
                 return this.tablePayment;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public PlaneDataTable Plane {
-            get {
-                return this.tablePlane;
             }
         }
         
@@ -365,7 +331,7 @@ namespace TravelBookingApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            HappyAirLineDataSet cln = ((HappyAirLineDataSet)(base.Clone()));
+            AirLineDataSet cln = ((AirLineDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -393,9 +359,6 @@ namespace TravelBookingApp {
                 if ((ds.Tables["Account"] != null)) {
                     base.Tables.Add(new AccountDataTable(ds.Tables["Account"]));
                 }
-                if ((ds.Tables["Airport"] != null)) {
-                    base.Tables.Add(new AirportDataTable(ds.Tables["Airport"]));
-                }
                 if ((ds.Tables["Backup_Record"] != null)) {
                     base.Tables.Add(new Backup_RecordDataTable(ds.Tables["Backup_Record"]));
                 }
@@ -416,9 +379,6 @@ namespace TravelBookingApp {
                 }
                 if ((ds.Tables["Payment"] != null)) {
                     base.Tables.Add(new PaymentDataTable(ds.Tables["Payment"]));
-                }
-                if ((ds.Tables["Plane"] != null)) {
-                    base.Tables.Add(new PlaneDataTable(ds.Tables["Plane"]));
                 }
                 if ((ds.Tables["Receipt"] != null)) {
                     base.Tables.Add(new ReceiptDataTable(ds.Tables["Receipt"]));
@@ -474,12 +434,6 @@ namespace TravelBookingApp {
                     this.tableAccount.InitVars();
                 }
             }
-            this.tableAirport = ((AirportDataTable)(base.Tables["Airport"]));
-            if ((initTable == true)) {
-                if ((this.tableAirport != null)) {
-                    this.tableAirport.InitVars();
-                }
-            }
             this.tableBackup_Record = ((Backup_RecordDataTable)(base.Tables["Backup_Record"]));
             if ((initTable == true)) {
                 if ((this.tableBackup_Record != null)) {
@@ -522,12 +476,6 @@ namespace TravelBookingApp {
                     this.tablePayment.InitVars();
                 }
             }
-            this.tablePlane = ((PlaneDataTable)(base.Tables["Plane"]));
-            if ((initTable == true)) {
-                if ((this.tablePlane != null)) {
-                    this.tablePlane.InitVars();
-                }
-            }
             this.tableReceipt = ((ReceiptDataTable)(base.Tables["Receipt"]));
             if ((initTable == true)) {
                 if ((this.tableReceipt != null)) {
@@ -564,10 +512,8 @@ namespace TravelBookingApp {
             this.relationPayment_Booking_fk = this.Relations["Payment_Booking_fk"];
             this.relationService_Booking_fk = this.Relations["Service_Booking_fk"];
             this.relationUser_Booking_fk = this.Relations["User_Booking_fk"];
-            this.relationAirport_Destination_fk = this.Relations["Airport_Destination_fk"];
             this.relationDestination_Flight_fk = this.Relations["Destination_Flight_fk"];
             this.relationCard_Payment_fk = this.Relations["Card_Payment_fk"];
-            this.relationFlight_Plane_fk = this.Relations["Flight_Plane_fk"];
             this.relationPayment_Reciept_fk = this.Relations["Payment_Reciept_fk"];
             this.relationUser_Role_User_fk = this.Relations["User_Role_User_fk"];
             this.relationMessage_User_Message_fk = this.Relations["Message_User_Message_fk"];
@@ -577,15 +523,13 @@ namespace TravelBookingApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "HappyAirLineDataSet";
+            this.DataSetName = "AirLineDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/HappyAirLineDataSet.xsd";
+            this.Namespace = "http://tempuri.org/AirLineDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableAccount = new AccountDataTable();
             base.Tables.Add(this.tableAccount);
-            this.tableAirport = new AirportDataTable();
-            base.Tables.Add(this.tableAirport);
             this.tableBackup_Record = new Backup_RecordDataTable();
             base.Tables.Add(this.tableBackup_Record);
             this.tableBooking = new BookingDataTable();
@@ -600,8 +544,6 @@ namespace TravelBookingApp {
             base.Tables.Add(this.tableMessage);
             this.tablePayment = new PaymentDataTable();
             base.Tables.Add(this.tablePayment);
-            this.tablePlane = new PlaneDataTable();
-            base.Tables.Add(this.tablePlane);
             this.tableReceipt = new ReceiptDataTable();
             base.Tables.Add(this.tableReceipt);
             this.tableService = new ServiceDataTable();
@@ -636,10 +578,6 @@ namespace TravelBookingApp {
                         this.tableUser_1.user_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableBooking.user_idColumn}, false);
             this.Relations.Add(this.relationUser_Booking_fk);
-            this.relationAirport_Destination_fk = new global::System.Data.DataRelation("Airport_Destination_fk", new global::System.Data.DataColumn[] {
-                        this.tableAirport.airport_idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDestination.airport_idColumn}, false);
-            this.Relations.Add(this.relationAirport_Destination_fk);
             this.relationDestination_Flight_fk = new global::System.Data.DataRelation("Destination_Flight_fk", new global::System.Data.DataColumn[] {
                         this.tableDestination.destination_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableFlight.destination_idColumn}, false);
@@ -648,10 +586,6 @@ namespace TravelBookingApp {
                         this.tableCard.card_numberColumn}, new global::System.Data.DataColumn[] {
                         this.tablePayment.card_numberColumn}, false);
             this.Relations.Add(this.relationCard_Payment_fk);
-            this.relationFlight_Plane_fk = new global::System.Data.DataRelation("Flight_Plane_fk", new global::System.Data.DataColumn[] {
-                        this.tableFlight.flight_codeColumn}, new global::System.Data.DataColumn[] {
-                        this.tablePlane.flight_codeColumn}, false);
-            this.Relations.Add(this.relationFlight_Plane_fk);
             this.relationPayment_Reciept_fk = new global::System.Data.DataRelation("Payment_Reciept_fk", new global::System.Data.DataColumn[] {
                         this.tablePayment.payment_idColumn}, new global::System.Data.DataColumn[] {
                         this.tableReceipt.payment_idColumn}, false);
@@ -673,12 +607,6 @@ namespace TravelBookingApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeAccount() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeAirport() {
             return false;
         }
         
@@ -726,12 +654,6 @@ namespace TravelBookingApp {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializePlane() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeReceipt() {
             return false;
         }
@@ -771,7 +693,7 @@ namespace TravelBookingApp {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            HappyAirLineDataSet ds = new HappyAirLineDataSet();
+            AirLineDataSet ds = new AirLineDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -819,9 +741,6 @@ namespace TravelBookingApp {
         public delegate void AccountRowChangeEventHandler(object sender, AccountRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void AirportRowChangeEventHandler(object sender, AirportRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void Backup_RecordRowChangeEventHandler(object sender, Backup_RecordRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -841,9 +760,6 @@ namespace TravelBookingApp {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void PaymentRowChangeEventHandler(object sender, PaymentRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void PlaneRowChangeEventHandler(object sender, PlaneRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void ReceiptRowChangeEventHandler(object sender, ReceiptRowChangeEvent e);
@@ -1124,7 +1040,7 @@ namespace TravelBookingApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
+                AirLineDataSet ds = new AirLineDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1143,296 +1059,6 @@ namespace TravelBookingApp {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "AccountDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class AirportDataTable : global::System.Data.TypedTableBase<AirportRow> {
-            
-            private global::System.Data.DataColumn columnairport_id;
-            
-            private global::System.Data.DataColumn columnairport_name;
-            
-            private global::System.Data.DataColumn columncode;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AirportDataTable() {
-                this.TableName = "Airport";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal AirportDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected AirportDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn airport_idColumn {
-                get {
-                    return this.columnairport_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn airport_nameColumn {
-                get {
-                    return this.columnairport_name;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn codeColumn {
-                get {
-                    return this.columncode;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AirportRow this[int index] {
-                get {
-                    return ((AirportRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AirportRowChangeEventHandler AirportRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AirportRowChangeEventHandler AirportRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AirportRowChangeEventHandler AirportRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event AirportRowChangeEventHandler AirportRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddAirportRow(AirportRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AirportRow AddAirportRow(int airport_id, string airport_name, string code) {
-                AirportRow rowAirportRow = ((AirportRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        airport_id,
-                        airport_name,
-                        code};
-                rowAirportRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowAirportRow);
-                return rowAirportRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AirportRow FindByairport_id(int airport_id) {
-                return ((AirportRow)(this.Rows.Find(new object[] {
-                            airport_id})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                AirportDataTable cln = ((AirportDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new AirportDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnairport_id = base.Columns["airport_id"];
-                this.columnairport_name = base.Columns["airport_name"];
-                this.columncode = base.Columns["code"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnairport_id = new global::System.Data.DataColumn("airport_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnairport_id);
-                this.columnairport_name = new global::System.Data.DataColumn("airport_name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnairport_name);
-                this.columncode = new global::System.Data.DataColumn("code", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncode);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnairport_id}, true));
-                this.columnairport_id.AllowDBNull = false;
-                this.columnairport_id.Unique = true;
-                this.columnairport_name.AllowDBNull = false;
-                this.columnairport_name.MaxLength = 1;
-                this.columncode.AllowDBNull = false;
-                this.columncode.MaxLength = 1;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AirportRow NewAirportRow() {
-                return ((AirportRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new AirportRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(AirportRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.AirportRowChanged != null)) {
-                    this.AirportRowChanged(this, new AirportRowChangeEvent(((AirportRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.AirportRowChanging != null)) {
-                    this.AirportRowChanging(this, new AirportRowChangeEvent(((AirportRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.AirportRowDeleted != null)) {
-                    this.AirportRowDeleted(this, new AirportRowChangeEvent(((AirportRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.AirportRowDeleting != null)) {
-                    this.AirportRowDeleting(this, new AirportRowChangeEvent(((AirportRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveAirportRow(AirportRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "AirportDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1721,7 +1347,7 @@ namespace TravelBookingApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
+                AirLineDataSet ds = new AirLineDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2099,7 +1725,7 @@ namespace TravelBookingApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
+                AirLineDataSet ds = new AirLineDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2434,7 +2060,7 @@ namespace TravelBookingApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
+                AirLineDataSet ds = new AirLineDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2504,11 +2130,11 @@ namespace TravelBookingApp {
             
             private global::System.Data.DataColumn columncity;
             
+            private global::System.Data.DataColumn columnairportName;
+            
             private global::System.Data.DataColumn columncountry;
             
             private global::System.Data.DataColumn columnregion;
-            
-            private global::System.Data.DataColumn columnairport_id;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -2561,6 +2187,14 @@ namespace TravelBookingApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn airportNameColumn {
+                get {
+                    return this.columnairportName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public global::System.Data.DataColumn countryColumn {
                 get {
                     return this.columncountry;
@@ -2572,14 +2206,6 @@ namespace TravelBookingApp {
             public global::System.Data.DataColumn regionColumn {
                 get {
                     return this.columnregion;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn airport_idColumn {
-                get {
-                    return this.columnairport_id;
                 }
             }
             
@@ -2620,17 +2246,14 @@ namespace TravelBookingApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DestinationRow AddDestinationRow(int destination_id, string city, string country, string region, AirportRow parentAirportRowByAirport_Destination_fk) {
+            public DestinationRow AddDestinationRow(int destination_id, string city, string airportName, string country, string region) {
                 DestinationRow rowDestinationRow = ((DestinationRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         destination_id,
                         city,
+                        airportName,
                         country,
-                        region,
-                        null};
-                if ((parentAirportRowByAirport_Destination_fk != null)) {
-                    columnValuesArray[4] = parentAirportRowByAirport_Destination_fk[0];
-                }
+                        region};
                 rowDestinationRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDestinationRow);
                 return rowDestinationRow;
@@ -2662,9 +2285,9 @@ namespace TravelBookingApp {
             internal void InitVars() {
                 this.columndestination_id = base.Columns["destination_id"];
                 this.columncity = base.Columns["city"];
+                this.columnairportName = base.Columns["airportName"];
                 this.columncountry = base.Columns["country"];
                 this.columnregion = base.Columns["region"];
-                this.columnairport_id = base.Columns["airport_id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2674,23 +2297,24 @@ namespace TravelBookingApp {
                 base.Columns.Add(this.columndestination_id);
                 this.columncity = new global::System.Data.DataColumn("city", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncity);
+                this.columnairportName = new global::System.Data.DataColumn("airportName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnairportName);
                 this.columncountry = new global::System.Data.DataColumn("country", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncountry);
                 this.columnregion = new global::System.Data.DataColumn("region", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnregion);
-                this.columnairport_id = new global::System.Data.DataColumn("airport_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnairport_id);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columndestination_id}, true));
                 this.columndestination_id.AllowDBNull = false;
                 this.columndestination_id.Unique = true;
                 this.columncity.AllowDBNull = false;
                 this.columncity.MaxLength = 1;
+                this.columnairportName.AllowDBNull = false;
+                this.columnairportName.MaxLength = 1;
                 this.columncountry.AllowDBNull = false;
                 this.columncountry.MaxLength = 1;
                 this.columnregion.AllowDBNull = false;
                 this.columnregion.MaxLength = 1;
-                this.columnairport_id.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2758,7 +2382,7 @@ namespace TravelBookingApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
+                AirLineDataSet ds = new AirLineDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3143,7 +2767,7 @@ namespace TravelBookingApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
+                AirLineDataSet ds = new AirLineDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3463,7 +3087,7 @@ namespace TravelBookingApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
+                AirLineDataSet ds = new AirLineDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3785,7 +3409,7 @@ namespace TravelBookingApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
+                AirLineDataSet ds = new AirLineDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3804,330 +3428,6 @@ namespace TravelBookingApp {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "PaymentDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class PlaneDataTable : global::System.Data.TypedTableBase<PlaneRow> {
-            
-            private global::System.Data.DataColumn columnplane_id;
-            
-            private global::System.Data.DataColumn columnmodel;
-            
-            private global::System.Data.DataColumn columnmanufacturer;
-            
-            private global::System.Data.DataColumn columncapacity;
-            
-            private global::System.Data.DataColumn columnflight_code;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PlaneDataTable() {
-                this.TableName = "Plane";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal PlaneDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected PlaneDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn plane_idColumn {
-                get {
-                    return this.columnplane_id;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn modelColumn {
-                get {
-                    return this.columnmodel;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn manufacturerColumn {
-                get {
-                    return this.columnmanufacturer;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn capacityColumn {
-                get {
-                    return this.columncapacity;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn flight_codeColumn {
-                get {
-                    return this.columnflight_code;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PlaneRow this[int index] {
-                get {
-                    return ((PlaneRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PlaneRowChangeEventHandler PlaneRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PlaneRowChangeEventHandler PlaneRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PlaneRowChangeEventHandler PlaneRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event PlaneRowChangeEventHandler PlaneRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddPlaneRow(PlaneRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PlaneRow AddPlaneRow(int plane_id, string model, string manufacturer, int capacity, FlightRow parentFlightRowByFlight_Plane_fk) {
-                PlaneRow rowPlaneRow = ((PlaneRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        plane_id,
-                        model,
-                        manufacturer,
-                        capacity,
-                        null};
-                if ((parentFlightRowByFlight_Plane_fk != null)) {
-                    columnValuesArray[4] = parentFlightRowByFlight_Plane_fk[0];
-                }
-                rowPlaneRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPlaneRow);
-                return rowPlaneRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PlaneRow FindByplane_id(int plane_id) {
-                return ((PlaneRow)(this.Rows.Find(new object[] {
-                            plane_id})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                PlaneDataTable cln = ((PlaneDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new PlaneDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnplane_id = base.Columns["plane_id"];
-                this.columnmodel = base.Columns["model"];
-                this.columnmanufacturer = base.Columns["manufacturer"];
-                this.columncapacity = base.Columns["capacity"];
-                this.columnflight_code = base.Columns["flight_code"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnplane_id = new global::System.Data.DataColumn("plane_id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnplane_id);
-                this.columnmodel = new global::System.Data.DataColumn("model", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmodel);
-                this.columnmanufacturer = new global::System.Data.DataColumn("manufacturer", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmanufacturer);
-                this.columncapacity = new global::System.Data.DataColumn("capacity", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncapacity);
-                this.columnflight_code = new global::System.Data.DataColumn("flight_code", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnflight_code);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnplane_id}, true));
-                this.columnplane_id.AllowDBNull = false;
-                this.columnplane_id.Unique = true;
-                this.columnmodel.AllowDBNull = false;
-                this.columnmodel.MaxLength = 1;
-                this.columnmanufacturer.AllowDBNull = false;
-                this.columnmanufacturer.MaxLength = 1;
-                this.columncapacity.AllowDBNull = false;
-                this.columnflight_code.AllowDBNull = false;
-                this.columnflight_code.MaxLength = 1;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PlaneRow NewPlaneRow() {
-                return ((PlaneRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new PlaneRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(PlaneRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.PlaneRowChanged != null)) {
-                    this.PlaneRowChanged(this, new PlaneRowChangeEvent(((PlaneRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.PlaneRowChanging != null)) {
-                    this.PlaneRowChanging(this, new PlaneRowChangeEvent(((PlaneRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.PlaneRowDeleted != null)) {
-                    this.PlaneRowDeleted(this, new PlaneRowChangeEvent(((PlaneRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.PlaneRowDeleting != null)) {
-                    this.PlaneRowDeleting(this, new PlaneRowChangeEvent(((PlaneRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemovePlaneRow(PlaneRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "PlaneDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -4415,7 +3715,7 @@ namespace TravelBookingApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
+                AirLineDataSet ds = new AirLineDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4720,7 +4020,7 @@ namespace TravelBookingApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
+                AirLineDataSet ds = new AirLineDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5076,7 +4376,7 @@ namespace TravelBookingApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
+                AirLineDataSet ds = new AirLineDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5356,7 +4656,7 @@ namespace TravelBookingApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
+                AirLineDataSet ds = new AirLineDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5630,7 +4930,7 @@ namespace TravelBookingApp {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                HappyAirLineDataSet ds = new HappyAirLineDataSet();
+                AirLineDataSet ds = new AirLineDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -5766,65 +5066,6 @@ namespace TravelBookingApp {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["User_Account_fk"]);
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class AirportRow : global::System.Data.DataRow {
-            
-            private AirportDataTable tableAirport;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal AirportRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tableAirport = ((AirportDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int airport_id {
-                get {
-                    return ((int)(this[this.tableAirport.airport_idColumn]));
-                }
-                set {
-                    this[this.tableAirport.airport_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string airport_name {
-                get {
-                    return ((string)(this[this.tableAirport.airport_nameColumn]));
-                }
-                set {
-                    this[this.tableAirport.airport_nameColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string code {
-                get {
-                    return ((string)(this[this.tableAirport.codeColumn]));
-                }
-                set {
-                    this[this.tableAirport.codeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DestinationRow[] GetDestinationRows() {
-                if ((this.Table.ChildRelations["Airport_Destination_fk"] == null)) {
-                    return new DestinationRow[0];
-                }
-                else {
-                    return ((DestinationRow[])(base.GetChildRows(this.Table.ChildRelations["Airport_Destination_fk"])));
                 }
             }
         }
@@ -6176,6 +5417,17 @@ namespace TravelBookingApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string airportName {
+                get {
+                    return ((string)(this[this.tableDestination.airportNameColumn]));
+                }
+                set {
+                    this[this.tableDestination.airportNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string country {
                 get {
                     return ((string)(this[this.tableDestination.countryColumn]));
@@ -6193,28 +5445,6 @@ namespace TravelBookingApp {
                 }
                 set {
                     this[this.tableDestination.regionColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int airport_id {
-                get {
-                    return ((int)(this[this.tableDestination.airport_idColumn]));
-                }
-                set {
-                    this[this.tableDestination.airport_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AirportRow AirportRow {
-                get {
-                    return ((AirportRow)(this.GetParentRow(this.Table.ParentRelations["Airport_Destination_fk"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["Airport_Destination_fk"]);
                 }
             }
             
@@ -6362,17 +5592,6 @@ namespace TravelBookingApp {
                 }
                 else {
                     return ((BookingRow[])(base.GetChildRows(this.Table.ChildRelations["Flight_Booking_fk"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PlaneRow[] GetPlaneRows() {
-                if ((this.Table.ChildRelations["Flight_Plane_fk"] == null)) {
-                    return new PlaneRow[0];
-                }
-                else {
-                    return ((PlaneRow[])(base.GetChildRows(this.Table.ChildRelations["Flight_Plane_fk"])));
                 }
             }
         }
@@ -6557,87 +5776,6 @@ namespace TravelBookingApp {
                 }
                 else {
                     return ((ReceiptRow[])(base.GetChildRows(this.Table.ChildRelations["Payment_Reciept_fk"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
-        public partial class PlaneRow : global::System.Data.DataRow {
-            
-            private PlaneDataTable tablePlane;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal PlaneRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablePlane = ((PlaneDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int plane_id {
-                get {
-                    return ((int)(this[this.tablePlane.plane_idColumn]));
-                }
-                set {
-                    this[this.tablePlane.plane_idColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string model {
-                get {
-                    return ((string)(this[this.tablePlane.modelColumn]));
-                }
-                set {
-                    this[this.tablePlane.modelColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string manufacturer {
-                get {
-                    return ((string)(this[this.tablePlane.manufacturerColumn]));
-                }
-                set {
-                    this[this.tablePlane.manufacturerColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int capacity {
-                get {
-                    return ((int)(this[this.tablePlane.capacityColumn]));
-                }
-                set {
-                    this[this.tablePlane.capacityColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string flight_code {
-                get {
-                    return ((string)(this[this.tablePlane.flight_codeColumn]));
-                }
-                set {
-                    this[this.tablePlane.flight_codeColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public FlightRow FlightRow {
-                get {
-                    return ((FlightRow)(this.GetParentRow(this.Table.ParentRelations["Flight_Plane_fk"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["Flight_Plane_fk"]);
                 }
             }
         }
@@ -7074,40 +6212,6 @@ namespace TravelBookingApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class AirportRowChangeEvent : global::System.EventArgs {
-            
-            private AirportRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AirportRowChangeEvent(AirportRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public AirportRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public class Backup_RecordRowChangeEvent : global::System.EventArgs {
             
             private Backup_RecordRow eventRow;
@@ -7346,40 +6450,6 @@ namespace TravelBookingApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class PlaneRowChangeEvent : global::System.EventArgs {
-            
-            private PlaneRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PlaneRowChangeEvent(PlaneRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public PlaneRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public class ReceiptRowChangeEvent : global::System.EventArgs {
             
             private ReceiptRow eventRow;
@@ -7547,7 +6617,7 @@ namespace TravelBookingApp {
         }
     }
 }
-namespace TravelBookingApp.HappyAirLineDataSetTableAdapters {
+namespace TravelBookingApp.AirLineDataSetTableAdapters {
     
     
     /// <summary>
@@ -7719,7 +6789,7 @@ SELECT account_id, date_created, status, password, user_id FROM Account WHERE (a
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
+            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.AirLineConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7736,7 +6806,7 @@ SELECT account_id, date_created, status, password, user_id FROM Account WHERE (a
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.AccountDataTable dataTable) {
+        public virtual int Fill(AirLineDataSet.AccountDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7749,9 +6819,9 @@ SELECT account_id, date_created, status, password, user_id FROM Account WHERE (a
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.AccountDataTable GetData() {
+        public virtual AirLineDataSet.AccountDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.AccountDataTable dataTable = new HappyAirLineDataSet.AccountDataTable();
+            AirLineDataSet.AccountDataTable dataTable = new AirLineDataSet.AccountDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7759,14 +6829,14 @@ SELECT account_id, date_created, status, password, user_id FROM Account WHERE (a
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.AccountDataTable dataTable) {
+        public virtual int Update(AirLineDataSet.AccountDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
+        public virtual int Update(AirLineDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Account");
         }
         
@@ -7914,355 +6984,6 @@ SELECT account_id, date_created, status, password, user_id FROM Account WHERE (a
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(System.DateTime date_created, string status, string password, int user_id, int Original_account_id, System.DateTime Original_date_created, string Original_status, string Original_password, int Original_user_id) {
             return this.Update(Original_account_id, date_created, status, password, user_id, Original_account_id, Original_date_created, Original_status, Original_password, Original_user_id);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class AirportTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public AirportTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Airport";
-            tableMapping.ColumnMappings.Add("airport_id", "airport_id");
-            tableMapping.ColumnMappings.Add("airport_name", "airport_name");
-            tableMapping.ColumnMappings.Add("code", "code");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Airport] WHERE (([airport_id] = @Original_airport_id) AND ([ai" +
-                "rport_name] = @Original_airport_name) AND ([code] = @Original_code))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_airport_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airport_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_airport_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airport_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Airport] ([airport_id], [airport_name], [code]) VALUES (@airpo" +
-                "rt_id, @airport_name, @code);\r\nSELECT airport_id, airport_name, code FROM Airpor" +
-                "t WHERE (airport_id = @airport_id)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@airport_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airport_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@airport_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airport_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Airport] SET [airport_id] = @airport_id, [airport_name] = @airport_name, [code] = @code WHERE (([airport_id] = @Original_airport_id) AND ([airport_name] = @Original_airport_name) AND ([code] = @Original_code));
-SELECT airport_id, airport_name, code FROM Airport WHERE (airport_id = @airport_id)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@airport_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airport_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@airport_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airport_name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_airport_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airport_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_airport_name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airport_name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT airport_id, airport_name, code FROM dbo.Airport";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.AirportDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.AirportDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.AirportDataTable dataTable = new HappyAirLineDataSet.AirportDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.AirportDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Airport");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_airport_id, string Original_airport_name, string Original_code) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_airport_id));
-            if ((Original_airport_name == null)) {
-                throw new global::System.ArgumentNullException("Original_airport_name");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_airport_name));
-            }
-            if ((Original_code == null)) {
-                throw new global::System.ArgumentNullException("Original_code");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_code));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int airport_id, string airport_name, string code) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(airport_id));
-            if ((airport_name == null)) {
-                throw new global::System.ArgumentNullException("airport_name");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(airport_name));
-            }
-            if ((code == null)) {
-                throw new global::System.ArgumentNullException("code");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(code));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int airport_id, string airport_name, string code, int Original_airport_id, string Original_airport_name, string Original_code) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(airport_id));
-            if ((airport_name == null)) {
-                throw new global::System.ArgumentNullException("airport_name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(airport_name));
-            }
-            if ((code == null)) {
-                throw new global::System.ArgumentNullException("code");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(code));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_airport_id));
-            if ((Original_airport_name == null)) {
-                throw new global::System.ArgumentNullException("Original_airport_name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_airport_name));
-            }
-            if ((Original_code == null)) {
-                throw new global::System.ArgumentNullException("Original_code");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_code));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string airport_name, string code, int Original_airport_id, string Original_airport_name, string Original_code) {
-            return this.Update(Original_airport_id, airport_name, code, Original_airport_id, Original_airport_name, Original_code);
         }
     }
     
@@ -8430,7 +7151,7 @@ SELECT backup_id, backup_date, backup_file_location, user_id FROM Backup_Record 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
+            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.AirLineConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8448,7 +7169,7 @@ SELECT backup_id, backup_date, backup_file_location, user_id FROM Backup_Record 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.Backup_RecordDataTable dataTable) {
+        public virtual int Fill(AirLineDataSet.Backup_RecordDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8461,9 +7182,9 @@ SELECT backup_id, backup_date, backup_file_location, user_id FROM Backup_Record 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.Backup_RecordDataTable GetData() {
+        public virtual AirLineDataSet.Backup_RecordDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.Backup_RecordDataTable dataTable = new HappyAirLineDataSet.Backup_RecordDataTable();
+            AirLineDataSet.Backup_RecordDataTable dataTable = new AirLineDataSet.Backup_RecordDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8471,14 +7192,14 @@ SELECT backup_id, backup_date, backup_file_location, user_id FROM Backup_Record 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.Backup_RecordDataTable dataTable) {
+        public virtual int Update(AirLineDataSet.Backup_RecordDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
+        public virtual int Update(AirLineDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Backup_Record");
         }
         
@@ -8787,7 +7508,7 @@ SELECT booking_id, booking_status, cabin_class, total_price, service_id, flight_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
+            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.AirLineConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8805,7 +7526,7 @@ SELECT booking_id, booking_status, cabin_class, total_price, service_id, flight_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.BookingDataTable dataTable) {
+        public virtual int Fill(AirLineDataSet.BookingDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8818,9 +7539,9 @@ SELECT booking_id, booking_status, cabin_class, total_price, service_id, flight_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.BookingDataTable GetData() {
+        public virtual AirLineDataSet.BookingDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.BookingDataTable dataTable = new HappyAirLineDataSet.BookingDataTable();
+            AirLineDataSet.BookingDataTable dataTable = new AirLineDataSet.BookingDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8828,14 +7549,14 @@ SELECT booking_id, booking_status, cabin_class, total_price, service_id, flight_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.BookingDataTable dataTable) {
+        public virtual int Update(AirLineDataSet.BookingDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
+        public virtual int Update(AirLineDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Booking");
         }
         
@@ -9206,7 +7927,7 @@ SELECT card_number, card_type, card_holder_name, card_security_code, PIN, expiry
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
+            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.AirLineConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9224,7 +7945,7 @@ SELECT card_number, card_type, card_holder_name, card_security_code, PIN, expiry
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.CardDataTable dataTable) {
+        public virtual int Fill(AirLineDataSet.CardDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9237,9 +7958,9 @@ SELECT card_number, card_type, card_holder_name, card_security_code, PIN, expiry
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.CardDataTable GetData() {
+        public virtual AirLineDataSet.CardDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.CardDataTable dataTable = new HappyAirLineDataSet.CardDataTable();
+            AirLineDataSet.CardDataTable dataTable = new AirLineDataSet.CardDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9247,14 +7968,14 @@ SELECT card_number, card_type, card_holder_name, card_security_code, PIN, expiry
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.CardDataTable dataTable) {
+        public virtual int Update(AirLineDataSet.CardDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
+        public virtual int Update(AirLineDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Card");
         }
         
@@ -9532,53 +8253,53 @@ SELECT card_number, card_type, card_holder_name, card_security_code, PIN, expiry
             tableMapping.DataSetTable = "Destination";
             tableMapping.ColumnMappings.Add("destination_id", "destination_id");
             tableMapping.ColumnMappings.Add("city", "city");
+            tableMapping.ColumnMappings.Add("airportName", "airportName");
             tableMapping.ColumnMappings.Add("country", "country");
             tableMapping.ColumnMappings.Add("region", "region");
-            tableMapping.ColumnMappings.Add("airport_id", "airport_id");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Destination] WHERE (([destination_id] = @Original_destination_" +
-                "id) AND ([city] = @Original_city) AND ([country] = @Original_country) AND ([regi" +
-                "on] = @Original_region) AND ([airport_id] = @Original_airport_id))";
+                "id) AND ([city] = @Original_city) AND ([airportName] = @Original_airportName) AN" +
+                "D ([country] = @Original_country) AND ([region] = @Original_region))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_destination_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "destination_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_city", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_airportName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airportName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_country", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "country", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_region", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "region", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_airport_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airport_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Destination] ([destination_id], [city], [country], [region], [airport_id]) VALUES (@destination_id, @city, @country, @region, @airport_id);
-SELECT destination_id, city, country, region, airport_id FROM Destination WHERE (destination_id = @destination_id)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Destination] ([destination_id], [city], [airportName], [country], [region]) VALUES (@destination_id, @city, @airportName, @country, @region);
+SELECT destination_id, city, airportName, country, region FROM Destination WHERE (destination_id = @destination_id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@destination_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "destination_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@city", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@airportName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airportName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@country", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "country", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@region", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "region", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@airport_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airport_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Destination] SET [destination_id] = @destination_id, [city] = @city, [country] = @country, [region] = @region, [airport_id] = @airport_id WHERE (([destination_id] = @Original_destination_id) AND ([city] = @Original_city) AND ([country] = @Original_country) AND ([region] = @Original_region) AND ([airport_id] = @Original_airport_id));
-SELECT destination_id, city, country, region, airport_id FROM Destination WHERE (destination_id = @destination_id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Destination] SET [destination_id] = @destination_id, [city] = @city, [airportName] = @airportName, [country] = @country, [region] = @region WHERE (([destination_id] = @Original_destination_id) AND ([city] = @Original_city) AND ([airportName] = @Original_airportName) AND ([country] = @Original_country) AND ([region] = @Original_region));
+SELECT destination_id, city, airportName, country, region FROM Destination WHERE (destination_id = @destination_id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@destination_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "destination_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@city", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@airportName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airportName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@country", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "country", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@region", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "region", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@airport_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airport_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_destination_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "destination_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_city", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "city", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_airportName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airportName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_country", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "country", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_region", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "region", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_airport_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "airport_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
+            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.AirLineConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9587,7 +8308,7 @@ SELECT destination_id, city, country, region, airport_id FROM Destination WHERE 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT destination_id, city, country, region, airport_id FROM dbo.Destination";
+            this._commandCollection[0].CommandText = "SELECT destination_id, city, airportName, country, region FROM dbo.Destination";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9595,7 +8316,7 @@ SELECT destination_id, city, country, region, airport_id FROM Destination WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.DestinationDataTable dataTable) {
+        public virtual int Fill(AirLineDataSet.DestinationDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9608,9 +8329,9 @@ SELECT destination_id, city, country, region, airport_id FROM Destination WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.DestinationDataTable GetData() {
+        public virtual AirLineDataSet.DestinationDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.DestinationDataTable dataTable = new HappyAirLineDataSet.DestinationDataTable();
+            AirLineDataSet.DestinationDataTable dataTable = new AirLineDataSet.DestinationDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9618,14 +8339,14 @@ SELECT destination_id, city, country, region, airport_id FROM Destination WHERE 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.DestinationDataTable dataTable) {
+        public virtual int Update(AirLineDataSet.DestinationDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
+        public virtual int Update(AirLineDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Destination");
         }
         
@@ -9648,7 +8369,7 @@ SELECT destination_id, city, country, region, airport_id FROM Destination WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_destination_id, string Original_city, string Original_country, string Original_region, int Original_airport_id) {
+        public virtual int Delete(int Original_destination_id, string Original_city, string Original_airportName, string Original_country, string Original_region) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_destination_id));
             if ((Original_city == null)) {
                 throw new global::System.ArgumentNullException("Original_city");
@@ -9656,19 +8377,24 @@ SELECT destination_id, city, country, region, airport_id FROM Destination WHERE 
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_city));
             }
+            if ((Original_airportName == null)) {
+                throw new global::System.ArgumentNullException("Original_airportName");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_airportName));
+            }
             if ((Original_country == null)) {
                 throw new global::System.ArgumentNullException("Original_country");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_country));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_country));
             }
             if ((Original_region == null)) {
                 throw new global::System.ArgumentNullException("Original_region");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_region));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_region));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_airport_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9689,7 +8415,7 @@ SELECT destination_id, city, country, region, airport_id FROM Destination WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int destination_id, string city, string country, string region, int airport_id) {
+        public virtual int Insert(int destination_id, string city, string airportName, string country, string region) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(destination_id));
             if ((city == null)) {
                 throw new global::System.ArgumentNullException("city");
@@ -9697,19 +8423,24 @@ SELECT destination_id, city, country, region, airport_id FROM Destination WHERE 
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(city));
             }
+            if ((airportName == null)) {
+                throw new global::System.ArgumentNullException("airportName");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(airportName));
+            }
             if ((country == null)) {
                 throw new global::System.ArgumentNullException("country");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(country));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(country));
             }
             if ((region == null)) {
                 throw new global::System.ArgumentNullException("region");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(region));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(region));
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(airport_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9730,7 +8461,7 @@ SELECT destination_id, city, country, region, airport_id FROM Destination WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int destination_id, string city, string country, string region, int airport_id, int Original_destination_id, string Original_city, string Original_country, string Original_region, int Original_airport_id) {
+        public virtual int Update(int destination_id, string city, string airportName, string country, string region, int Original_destination_id, string Original_city, string Original_airportName, string Original_country, string Original_region) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(destination_id));
             if ((city == null)) {
                 throw new global::System.ArgumentNullException("city");
@@ -9738,19 +8469,24 @@ SELECT destination_id, city, country, region, airport_id FROM Destination WHERE 
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(city));
             }
+            if ((airportName == null)) {
+                throw new global::System.ArgumentNullException("airportName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(airportName));
+            }
             if ((country == null)) {
                 throw new global::System.ArgumentNullException("country");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(country));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(country));
             }
             if ((region == null)) {
                 throw new global::System.ArgumentNullException("region");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(region));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(region));
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(airport_id));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_destination_id));
             if ((Original_city == null)) {
                 throw new global::System.ArgumentNullException("Original_city");
@@ -9758,19 +8494,24 @@ SELECT destination_id, city, country, region, airport_id FROM Destination WHERE 
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_city));
             }
+            if ((Original_airportName == null)) {
+                throw new global::System.ArgumentNullException("Original_airportName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_airportName));
+            }
             if ((Original_country == null)) {
                 throw new global::System.ArgumentNullException("Original_country");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_country));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_country));
             }
             if ((Original_region == null)) {
                 throw new global::System.ArgumentNullException("Original_region");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_region));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_region));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_airport_id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9791,8 +8532,8 @@ SELECT destination_id, city, country, region, airport_id FROM Destination WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string city, string country, string region, int airport_id, int Original_destination_id, string Original_city, string Original_country, string Original_region, int Original_airport_id) {
-            return this.Update(Original_destination_id, city, country, region, airport_id, Original_destination_id, Original_city, Original_country, Original_region, Original_airport_id);
+        public virtual int Update(string city, string airportName, string country, string region, int Original_destination_id, string Original_city, string Original_airportName, string Original_country, string Original_region) {
+            return this.Update(Original_destination_id, city, airportName, country, region, Original_destination_id, Original_city, Original_airportName, Original_country, Original_region);
         }
     }
     
@@ -9983,7 +8724,7 @@ SELECT flight_code, arrival_time, departure_time, terminal_number, destination_i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
+            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.AirLineConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10001,7 +8742,7 @@ SELECT flight_code, arrival_time, departure_time, terminal_number, destination_i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.FlightDataTable dataTable) {
+        public virtual int Fill(AirLineDataSet.FlightDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10014,9 +8755,9 @@ SELECT flight_code, arrival_time, departure_time, terminal_number, destination_i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.FlightDataTable GetData() {
+        public virtual AirLineDataSet.FlightDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.FlightDataTable dataTable = new HappyAirLineDataSet.FlightDataTable();
+            AirLineDataSet.FlightDataTable dataTable = new AirLineDataSet.FlightDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10024,14 +8765,14 @@ SELECT flight_code, arrival_time, departure_time, terminal_number, destination_i
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.FlightDataTable dataTable) {
+        public virtual int Update(AirLineDataSet.FlightDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
+        public virtual int Update(AirLineDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Flight");
         }
         
@@ -10442,7 +9183,7 @@ SELECT massage_id, massage_title, massage_content, time, date FROM Message WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
+            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.AirLineConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10459,7 +9200,7 @@ SELECT massage_id, massage_title, massage_content, time, date FROM Message WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.MessageDataTable dataTable) {
+        public virtual int Fill(AirLineDataSet.MessageDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10472,9 +9213,9 @@ SELECT massage_id, massage_title, massage_content, time, date FROM Message WHERE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.MessageDataTable GetData() {
+        public virtual AirLineDataSet.MessageDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.MessageDataTable dataTable = new HappyAirLineDataSet.MessageDataTable();
+            AirLineDataSet.MessageDataTable dataTable = new AirLineDataSet.MessageDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10482,14 +9223,14 @@ SELECT massage_id, massage_title, massage_content, time, date FROM Message WHERE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.MessageDataTable dataTable) {
+        public virtual int Update(AirLineDataSet.MessageDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
+        public virtual int Update(AirLineDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Message");
         }
         
@@ -10807,7 +9548,7 @@ SELECT payment_id, payment_status, payment_time, payment_date, card_number FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
+            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.AirLineConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10825,7 +9566,7 @@ SELECT payment_id, payment_status, payment_time, payment_date, card_number FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.PaymentDataTable dataTable) {
+        public virtual int Fill(AirLineDataSet.PaymentDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -10838,9 +9579,9 @@ SELECT payment_id, payment_status, payment_time, payment_date, card_number FROM 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.PaymentDataTable GetData() {
+        public virtual AirLineDataSet.PaymentDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.PaymentDataTable dataTable = new HappyAirLineDataSet.PaymentDataTable();
+            AirLineDataSet.PaymentDataTable dataTable = new AirLineDataSet.PaymentDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -10848,14 +9589,14 @@ SELECT payment_id, payment_status, payment_time, payment_date, card_number FROM 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.PaymentDataTable dataTable) {
+        public virtual int Update(AirLineDataSet.PaymentDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
+        public virtual int Update(AirLineDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Payment");
         }
         
@@ -10983,393 +9724,6 @@ SELECT payment_id, payment_status, payment_time, payment_date, card_number FROM 
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string payment_status, System.DateTime payment_time, System.DateTime payment_date, int card_number, int Original_payment_id, string Original_payment_status, System.DateTime Original_payment_time, System.DateTime Original_payment_date, int Original_card_number) {
             return this.Update(Original_payment_id, payment_status, payment_time, payment_date, card_number, Original_payment_id, Original_payment_status, Original_payment_time, Original_payment_date, Original_card_number);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PlaneTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public PlaneTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Plane";
-            tableMapping.ColumnMappings.Add("plane_id", "plane_id");
-            tableMapping.ColumnMappings.Add("model", "model");
-            tableMapping.ColumnMappings.Add("manufacturer", "manufacturer");
-            tableMapping.ColumnMappings.Add("capacity", "capacity");
-            tableMapping.ColumnMappings.Add("flight_code", "flight_code");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Plane] WHERE (([plane_id] = @Original_plane_id) AND ([model] =" +
-                " @Original_model) AND ([manufacturer] = @Original_manufacturer) AND ([capacity] " +
-                "= @Original_capacity) AND ([flight_code] = @Original_flight_code))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_plane_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "plane_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_model", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "model", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_manufacturer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "manufacturer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "capacity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flight_code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flight_code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Plane] ([plane_id], [model], [manufacturer], [capacity], [flight_code]) VALUES (@plane_id, @model, @manufacturer, @capacity, @flight_code);
-SELECT plane_id, model, manufacturer, capacity, flight_code FROM Plane WHERE (plane_id = @plane_id)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@plane_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "plane_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@model", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@manufacturer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "manufacturer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flight_code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flight_code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Plane] SET [plane_id] = @plane_id, [model] = @model, [manufacturer] = @manufacturer, [capacity] = @capacity, [flight_code] = @flight_code WHERE (([plane_id] = @Original_plane_id) AND ([model] = @Original_model) AND ([manufacturer] = @Original_manufacturer) AND ([capacity] = @Original_capacity) AND ([flight_code] = @Original_flight_code));
-SELECT plane_id, model, manufacturer, capacity, flight_code FROM Plane WHERE (plane_id = @plane_id)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@plane_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "plane_id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@model", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "model", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@manufacturer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "manufacturer", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "capacity", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flight_code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flight_code", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_plane_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "plane_id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_model", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "model", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_manufacturer", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "manufacturer", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_capacity", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "capacity", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flight_code", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flight_code", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT plane_id, model, manufacturer, capacity, flight_code FROM dbo.Plane";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.PlaneDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.PlaneDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.PlaneDataTable dataTable = new HappyAirLineDataSet.PlaneDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.PlaneDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Plane");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_plane_id, string Original_model, string Original_manufacturer, int Original_capacity, string Original_flight_code) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_plane_id));
-            if ((Original_model == null)) {
-                throw new global::System.ArgumentNullException("Original_model");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_model));
-            }
-            if ((Original_manufacturer == null)) {
-                throw new global::System.ArgumentNullException("Original_manufacturer");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_manufacturer));
-            }
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_capacity));
-            if ((Original_flight_code == null)) {
-                throw new global::System.ArgumentNullException("Original_flight_code");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_flight_code));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int plane_id, string model, string manufacturer, int capacity, string flight_code) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(plane_id));
-            if ((model == null)) {
-                throw new global::System.ArgumentNullException("model");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(model));
-            }
-            if ((manufacturer == null)) {
-                throw new global::System.ArgumentNullException("manufacturer");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(manufacturer));
-            }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(capacity));
-            if ((flight_code == null)) {
-                throw new global::System.ArgumentNullException("flight_code");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(flight_code));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int plane_id, string model, string manufacturer, int capacity, string flight_code, int Original_plane_id, string Original_model, string Original_manufacturer, int Original_capacity, string Original_flight_code) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(plane_id));
-            if ((model == null)) {
-                throw new global::System.ArgumentNullException("model");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(model));
-            }
-            if ((manufacturer == null)) {
-                throw new global::System.ArgumentNullException("manufacturer");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(manufacturer));
-            }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(capacity));
-            if ((flight_code == null)) {
-                throw new global::System.ArgumentNullException("flight_code");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(flight_code));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_plane_id));
-            if ((Original_model == null)) {
-                throw new global::System.ArgumentNullException("Original_model");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_model));
-            }
-            if ((Original_manufacturer == null)) {
-                throw new global::System.ArgumentNullException("Original_manufacturer");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_manufacturer));
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_capacity));
-            if ((Original_flight_code == null)) {
-                throw new global::System.ArgumentNullException("Original_flight_code");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_flight_code));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string model, string manufacturer, int capacity, string flight_code, int Original_plane_id, string Original_model, string Original_manufacturer, int Original_capacity, string Original_flight_code) {
-            return this.Update(Original_plane_id, model, manufacturer, capacity, flight_code, Original_plane_id, Original_model, Original_manufacturer, Original_capacity, Original_flight_code);
         }
     }
     
@@ -11539,7 +9893,7 @@ SELECT receipt_id, total_amount, date_issued, payment_id FROM Receipt WHERE (rec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
+            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.AirLineConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11556,7 +9910,7 @@ SELECT receipt_id, total_amount, date_issued, payment_id FROM Receipt WHERE (rec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.ReceiptDataTable dataTable) {
+        public virtual int Fill(AirLineDataSet.ReceiptDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11569,9 +9923,9 @@ SELECT receipt_id, total_amount, date_issued, payment_id FROM Receipt WHERE (rec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.ReceiptDataTable GetData() {
+        public virtual AirLineDataSet.ReceiptDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.ReceiptDataTable dataTable = new HappyAirLineDataSet.ReceiptDataTable();
+            AirLineDataSet.ReceiptDataTable dataTable = new AirLineDataSet.ReceiptDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11579,14 +9933,14 @@ SELECT receipt_id, total_amount, date_issued, payment_id FROM Receipt WHERE (rec
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.ReceiptDataTable dataTable) {
+        public virtual int Update(AirLineDataSet.ReceiptDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
+        public virtual int Update(AirLineDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Receipt");
         }
         
@@ -11858,7 +10212,7 @@ SELECT service_id, service_name, description, price FROM Service WHERE (service_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
+            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.AirLineConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11875,7 +10229,7 @@ SELECT service_id, service_name, description, price FROM Service WHERE (service_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.ServiceDataTable dataTable) {
+        public virtual int Fill(AirLineDataSet.ServiceDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -11888,9 +10242,9 @@ SELECT service_id, service_name, description, price FROM Service WHERE (service_
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.ServiceDataTable GetData() {
+        public virtual AirLineDataSet.ServiceDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.ServiceDataTable dataTable = new HappyAirLineDataSet.ServiceDataTable();
+            AirLineDataSet.ServiceDataTable dataTable = new AirLineDataSet.ServiceDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -11898,14 +10252,14 @@ SELECT service_id, service_name, description, price FROM Service WHERE (service_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.ServiceDataTable dataTable) {
+        public virtual int Update(AirLineDataSet.ServiceDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
+        public virtual int Update(AirLineDataSet dataSet) {
             return this.Adapter.Update(dataSet, "Service");
         }
         
@@ -12229,7 +10583,7 @@ SELECT user_id, username, first_name, last_name, email, phone, role_id FROM User
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
+            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.AirLineConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12247,7 +10601,7 @@ SELECT user_id, username, first_name, last_name, email, phone, role_id FROM User
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.User_1DataTable dataTable) {
+        public virtual int Fill(AirLineDataSet.User_1DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12260,9 +10614,9 @@ SELECT user_id, username, first_name, last_name, email, phone, role_id FROM User
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.User_1DataTable GetData() {
+        public virtual AirLineDataSet.User_1DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.User_1DataTable dataTable = new HappyAirLineDataSet.User_1DataTable();
+            AirLineDataSet.User_1DataTable dataTable = new AirLineDataSet.User_1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12270,14 +10624,14 @@ SELECT user_id, username, first_name, last_name, email, phone, role_id FROM User
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.User_1DataTable dataTable) {
+        public virtual int Update(AirLineDataSet.User_1DataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
+        public virtual int Update(AirLineDataSet dataSet) {
             return this.Adapter.Update(dataSet, "User_1");
         }
         
@@ -12650,7 +11004,7 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
+            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.AirLineConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12667,7 +11021,7 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.User_MessageDataTable dataTable) {
+        public virtual int Fill(AirLineDataSet.User_MessageDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12680,9 +11034,9 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.User_MessageDataTable GetData() {
+        public virtual AirLineDataSet.User_MessageDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.User_MessageDataTable dataTable = new HappyAirLineDataSet.User_MessageDataTable();
+            AirLineDataSet.User_MessageDataTable dataTable = new AirLineDataSet.User_MessageDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12690,14 +11044,14 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.User_MessageDataTable dataTable) {
+        public virtual int Update(AirLineDataSet.User_MessageDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
+        public virtual int Update(AirLineDataSet dataSet) {
             return this.Adapter.Update(dataSet, "User_Message");
         }
         
@@ -12950,7 +11304,7 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.HappyAirLineConnectionString;
+            this._connection.ConnectionString = global::TravelBookingApp.Properties.Settings.Default.AirLineConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12967,7 +11321,7 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(HappyAirLineDataSet.User_RoleDataTable dataTable) {
+        public virtual int Fill(AirLineDataSet.User_RoleDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -12980,9 +11334,9 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual HappyAirLineDataSet.User_RoleDataTable GetData() {
+        public virtual AirLineDataSet.User_RoleDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            HappyAirLineDataSet.User_RoleDataTable dataTable = new HappyAirLineDataSet.User_RoleDataTable();
+            AirLineDataSet.User_RoleDataTable dataTable = new AirLineDataSet.User_RoleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -12990,14 +11344,14 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet.User_RoleDataTable dataTable) {
+        public virtual int Update(AirLineDataSet.User_RoleDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(HappyAirLineDataSet dataSet) {
+        public virtual int Update(AirLineDataSet dataSet) {
             return this.Adapter.Update(dataSet, "User_Role");
         }
         
@@ -13130,8 +11484,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         
         private AccountTableAdapter _accountTableAdapter;
         
-        private AirportTableAdapter _airportTableAdapter;
-        
         private Backup_RecordTableAdapter _backup_RecordTableAdapter;
         
         private BookingTableAdapter _bookingTableAdapter;
@@ -13145,8 +11497,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         private MessageTableAdapter _messageTableAdapter;
         
         private PaymentTableAdapter _paymentTableAdapter;
-        
-        private PlaneTableAdapter _planeTableAdapter;
         
         private ReceiptTableAdapter _receiptTableAdapter;
         
@@ -13184,20 +11534,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
             }
             set {
                 this._accountTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
-        public AirportTableAdapter AirportTableAdapter {
-            get {
-                return this._airportTableAdapter;
-            }
-            set {
-                this._airportTableAdapter = value;
             }
         }
         
@@ -13304,20 +11640,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public PlaneTableAdapter PlaneTableAdapter {
-            get {
-                return this._planeTableAdapter;
-            }
-            set {
-                this._planeTableAdapter = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
-            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
-            "a", "System.Drawing.Design.UITypeEditor")]
         public ReceiptTableAdapter ReceiptTableAdapter {
             get {
                 return this._receiptTableAdapter;
@@ -13406,10 +11728,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
                             && (this._accountTableAdapter.Connection != null))) {
                     return this._accountTableAdapter.Connection;
                 }
-                if (((this._airportTableAdapter != null) 
-                            && (this._airportTableAdapter.Connection != null))) {
-                    return this._airportTableAdapter.Connection;
-                }
                 if (((this._backup_RecordTableAdapter != null) 
                             && (this._backup_RecordTableAdapter.Connection != null))) {
                     return this._backup_RecordTableAdapter.Connection;
@@ -13437,10 +11755,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
                 if (((this._paymentTableAdapter != null) 
                             && (this._paymentTableAdapter.Connection != null))) {
                     return this._paymentTableAdapter.Connection;
-                }
-                if (((this._planeTableAdapter != null) 
-                            && (this._planeTableAdapter.Connection != null))) {
-                    return this._planeTableAdapter.Connection;
                 }
                 if (((this._receiptTableAdapter != null) 
                             && (this._receiptTableAdapter.Connection != null))) {
@@ -13478,9 +11792,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
                 if ((this._accountTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._airportTableAdapter != null)) {
-                    count = (count + 1);
-                }
                 if ((this._backup_RecordTableAdapter != null)) {
                     count = (count + 1);
                 }
@@ -13500,9 +11811,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
                     count = (count + 1);
                 }
                 if ((this._paymentTableAdapter != null)) {
-                    count = (count + 1);
-                }
-                if ((this._planeTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._receiptTableAdapter != null)) {
@@ -13529,17 +11837,8 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(HappyAirLineDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(AirLineDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._airportTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Airport.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._airportTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._cardTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Card.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -13639,15 +11938,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._planeTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Plane.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._planeTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._receiptTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Receipt.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -13674,16 +11964,8 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(HappyAirLineDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(AirLineDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._airportTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Airport.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._airportTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._cardTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Card.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -13772,14 +12054,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._planeTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Plane.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._planeTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._receiptTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Receipt.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -13804,7 +12078,7 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(HappyAirLineDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(AirLineDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._user_MessageTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.User_Message.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -13819,14 +12093,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._receiptTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._planeTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Plane.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._planeTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -13918,14 +12184,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._airportTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Airport.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._airportTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             return result;
         }
         
@@ -13958,7 +12216,7 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(HappyAirLineDataSet dataSet) {
+        public virtual int UpdateAll(AirLineDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
@@ -13967,11 +12225,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
             }
             if (((this._accountTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._accountTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._airportTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._airportTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -14007,11 +12260,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
             }
             if (((this._paymentTableAdapter != null) 
                         && (this.MatchTableAdapterConnection(this._paymentTableAdapter.Connection) == false))) {
-                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
-                        "tring.");
-            }
-            if (((this._planeTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._planeTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -14081,15 +12329,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
                         adaptersWithAcceptChangesDuringUpdate.Add(this._accountTableAdapter.Adapter);
                     }
                 }
-                if ((this._airportTableAdapter != null)) {
-                    revertConnections.Add(this._airportTableAdapter, this._airportTableAdapter.Connection);
-                    this._airportTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._airportTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._airportTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._airportTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._airportTableAdapter.Adapter);
-                    }
-                }
                 if ((this._backup_RecordTableAdapter != null)) {
                     revertConnections.Add(this._backup_RecordTableAdapter, this._backup_RecordTableAdapter.Connection);
                     this._backup_RecordTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -14151,15 +12390,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
                     if (this._paymentTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._paymentTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._paymentTableAdapter.Adapter);
-                    }
-                }
-                if ((this._planeTableAdapter != null)) {
-                    revertConnections.Add(this._planeTableAdapter, this._planeTableAdapter.Connection);
-                    this._planeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._planeTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._planeTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._planeTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._planeTableAdapter.Adapter);
                     }
                 }
                 if ((this._receiptTableAdapter != null)) {
@@ -14269,10 +12499,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
                     this._accountTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._accountTableAdapter]));
                     this._accountTableAdapter.Transaction = null;
                 }
-                if ((this._airportTableAdapter != null)) {
-                    this._airportTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._airportTableAdapter]));
-                    this._airportTableAdapter.Transaction = null;
-                }
                 if ((this._backup_RecordTableAdapter != null)) {
                     this._backup_RecordTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._backup_RecordTableAdapter]));
                     this._backup_RecordTableAdapter.Transaction = null;
@@ -14300,10 +12526,6 @@ SELECT user_id, massage_id FROM User_Message WHERE (massage_id = @massage_id) AN
                 if ((this._paymentTableAdapter != null)) {
                     this._paymentTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._paymentTableAdapter]));
                     this._paymentTableAdapter.Transaction = null;
-                }
-                if ((this._planeTableAdapter != null)) {
-                    this._planeTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._planeTableAdapter]));
-                    this._planeTableAdapter.Transaction = null;
                 }
                 if ((this._receiptTableAdapter != null)) {
                     this._receiptTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._receiptTableAdapter]));

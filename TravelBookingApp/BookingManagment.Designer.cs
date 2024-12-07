@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -51,13 +52,19 @@
             this.sendMessageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inboxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bookingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.airLineDataSet = new TravelBookingApp.AirLineDataSet();
+            this.airLineDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.airLineDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.airLineDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.airLineDataSetBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(218, 177);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
@@ -80,7 +87,6 @@
             this.menuStrip1.AutoSize = false;
             this.menuStrip1.BackColor = System.Drawing.Color.SteelBlue;
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
@@ -236,6 +242,16 @@
             this.bookingsToolStripMenuItem.Size = new System.Drawing.Size(102, 83);
             this.bookingsToolStripMenuItem.Text = "Bookings";
             // 
+            // airLineDataSet
+            // 
+            this.airLineDataSet.DataSetName = "AirLineDataSet";
+            this.airLineDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // airLineDataSetBindingSource
+            // 
+            this.airLineDataSetBindingSource.DataSource = this.airLineDataSet;
+            this.airLineDataSetBindingSource.Position = 0;
+            // 
             // BookingManagment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -250,6 +266,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.airLineDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.airLineDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -279,5 +297,7 @@
         private System.Windows.Forms.ToolStripMenuItem sendMessageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem inboxToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bookingsToolStripMenuItem;
+        private System.Windows.Forms.BindingSource airLineDataSetBindingSource;
+        private AirLineDataSet airLineDataSet;
     }
 }

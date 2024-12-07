@@ -265,6 +265,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Name = "BookFlightsEmployer";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BookFlightsEmployer";
             this.ResumeLayout(false);
             this.PerformLayout();

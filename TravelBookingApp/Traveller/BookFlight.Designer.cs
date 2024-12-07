@@ -175,6 +175,7 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label2);
             this.Name = "BookFlight";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BookFlight";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

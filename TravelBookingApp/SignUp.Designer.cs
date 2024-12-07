@@ -36,7 +36,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.firstNameTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
-            this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
+            this.phoneTextBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
@@ -47,6 +47,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.roleComboBox = new System.Windows.Forms.ComboBox();
+            this.Password = new System.Windows.Forms.Label();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +60,7 @@
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+         //   this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -127,13 +129,13 @@
             this.emailTextBox.Size = new System.Drawing.Size(208, 26);
             this.emailTextBox.TabIndex = 7;
             // 
-            // phoneNumberTextBox
+            // phoneTextBox
             // 
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(238, 248);
-            this.phoneNumberTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(208, 26);
-            this.phoneNumberTextBox.TabIndex = 8;
+            this.phoneTextBox.Location = new System.Drawing.Point(238, 248);
+            this.phoneTextBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.phoneTextBox.Name = "phoneTextBox";
+            this.phoneTextBox.Size = new System.Drawing.Size(208, 26);
+            this.phoneTextBox.TabIndex = 8;
             // 
             // label6
             // 
@@ -214,7 +216,7 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+          //  this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // roleComboBox
             // 
@@ -223,13 +225,31 @@
             this.roleComboBox.Name = "roleComboBox";
             this.roleComboBox.Size = new System.Drawing.Size(200, 28);
             this.roleComboBox.TabIndex = 19;
-            this.roleComboBox.SelectedIndexChanged += new System.EventHandler(this.roleComboBox_SelectedIndexChanged);
+           // this.roleComboBox.SelectedIndexChanged += new System.EventHandler(this.roleComboBox_SelectedIndexChanged);
+            // 
+            // Password
+            // 
+            this.Password.AutoSize = true;
+            this.Password.Location = new System.Drawing.Point(771, 100);
+            this.Password.Name = "Password";
+            this.Password.Size = new System.Drawing.Size(51, 20);
+            this.Password.TabIndex = 20;
+            this.Password.Text = "label9";
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.Location = new System.Drawing.Point(775, 124);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(100, 26);
+            this.passwordTextBox.TabIndex = 21;
             // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 574);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.Password);
             this.Controls.Add(this.roleComboBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
@@ -240,7 +260,7 @@
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.lastNameTextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.phoneNumberTextBox);
+            this.Controls.Add(this.phoneTextBox);
             this.Controls.Add(this.emailTextBox);
             this.Controls.Add(this.firstNameTextBox);
             this.Controls.Add(this.button1);
@@ -268,7 +288,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox firstNameTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
-        private System.Windows.Forms.TextBox phoneNumberTextBox;
+        private System.Windows.Forms.TextBox phoneTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox lastNameTextBox;
         private System.Windows.Forms.TextBox usernameTextBox;
@@ -279,5 +299,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox roleComboBox;
+        private System.Windows.Forms.Label Password;
+        private System.Windows.Forms.TextBox passwordTextBox;
     }
 }
