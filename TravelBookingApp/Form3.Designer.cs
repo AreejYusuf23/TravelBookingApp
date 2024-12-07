@@ -28,16 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -59,74 +50,28 @@
             this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button11 = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageProfilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.destinationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageCategoriesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.flightsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.postUpcomingFlightsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageBookingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backupDatabaseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.servicesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeServiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.messagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sendMessageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inboxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bookingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.roleComboBox = new System.Windows.Forms.ComboBox();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(32, 18);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 69);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "User Management";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(176, 18);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(146, 69);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Flight Management";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(321, 18);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(146, 69);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Destination Management";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(465, 18);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(146, 69);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Booking Management";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(609, 18);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(146, 69);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Service Managment";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(756, 18);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(146, 69);
-            this.button6.TabIndex = 5;
-            this.button6.Text = " Messages";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button9
             // 
@@ -138,44 +83,6 @@
             this.button9.Text = "Edit";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(256, 22);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(93, 24);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Traveller";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(267, 432);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.groupBox1.Size = new System.Drawing.Size(459, 58);
-            this.groupBox1.TabIndex = 64;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Role";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(87, 18);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(100, 24);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Employer";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -390,24 +297,181 @@
             this.textBox1.TabIndex = 44;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button11
+            // menuStrip1
             // 
-            this.button11.Location = new System.Drawing.Point(32, 135);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(112, 35);
-            this.button11.TabIndex = 82;
-            this.button11.Text = "Back";
-            this.button11.UseVisualStyleBackColor = true;
+            this.menuStrip1.AutoSize = false;
+            this.menuStrip1.BackColor = System.Drawing.Color.SteelBlue;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.usersToolStripMenuItem,
+            this.destinationsToolStripMenuItem,
+            this.flightsToolStripMenuItem,
+            this.systemToolStripMenuItem,
+            this.servicesToolStripMenuItem,
+            this.messagesToolStripMenuItem,
+            this.bookingsToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(957, 87);
+            this.menuStrip1.TabIndex = 83;
+            this.menuStrip1.Text = "NavigationBar";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.logoutToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 83);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // logoutToolStripMenuItem
+            // 
+            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(171, 34);
+            this.logoutToolStripMenuItem.Text = "Logout";
+            // 
+            // usersToolStripMenuItem
+            // 
+            this.usersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageProfilesToolStripMenuItem});
+            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(71, 83);
+            this.usersToolStripMenuItem.Text = "Users";
+            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
+            // 
+            // manageProfilesToolStripMenuItem
+            // 
+            this.manageProfilesToolStripMenuItem.Name = "manageProfilesToolStripMenuItem";
+            this.manageProfilesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.manageProfilesToolStripMenuItem.Text = "Manage Profiles";
+            this.manageProfilesToolStripMenuItem.Click += new System.EventHandler(this.manageProfilesToolStripMenuItem_Click);
+            // 
+            // destinationsToolStripMenuItem
+            // 
+            this.destinationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageCategoriesToolStripMenuItem});
+            this.destinationsToolStripMenuItem.Name = "destinationsToolStripMenuItem";
+            this.destinationsToolStripMenuItem.Size = new System.Drawing.Size(126, 83);
+            this.destinationsToolStripMenuItem.Text = "Destinations";
+            // 
+            // manageCategoriesToolStripMenuItem
+            // 
+            this.manageCategoriesToolStripMenuItem.Name = "manageCategoriesToolStripMenuItem";
+            this.manageCategoriesToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.manageCategoriesToolStripMenuItem.Text = "Manage Categories";
+            this.manageCategoriesToolStripMenuItem.Click += new System.EventHandler(this.manageCategoriesToolStripMenuItem_Click);
+            // 
+            // flightsToolStripMenuItem
+            // 
+            this.flightsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.postUpcomingFlightsToolStripMenuItem,
+            this.manageBookingsToolStripMenuItem});
+            this.flightsToolStripMenuItem.Name = "flightsToolStripMenuItem";
+            this.flightsToolStripMenuItem.Size = new System.Drawing.Size(80, 83);
+            this.flightsToolStripMenuItem.Text = "Flights";
+            // 
+            // postUpcomingFlightsToolStripMenuItem
+            // 
+            this.postUpcomingFlightsToolStripMenuItem.Name = "postUpcomingFlightsToolStripMenuItem";
+            this.postUpcomingFlightsToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
+            this.postUpcomingFlightsToolStripMenuItem.Text = "Post Upcoming Flights";
+            this.postUpcomingFlightsToolStripMenuItem.Click += new System.EventHandler(this.postUpcomingFlightsToolStripMenuItem_Click);
+            // 
+            // manageBookingsToolStripMenuItem
+            // 
+            this.manageBookingsToolStripMenuItem.Name = "manageBookingsToolStripMenuItem";
+            this.manageBookingsToolStripMenuItem.Size = new System.Drawing.Size(293, 34);
+            this.manageBookingsToolStripMenuItem.Text = "Manage Bookings";
+            // 
+            // systemToolStripMenuItem
+            // 
+            this.systemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.backupDatabaseToolStripMenuItem});
+            this.systemToolStripMenuItem.Name = "systemToolStripMenuItem";
+            this.systemToolStripMenuItem.Size = new System.Drawing.Size(85, 83);
+            this.systemToolStripMenuItem.Text = "System";
+            // 
+            // backupDatabaseToolStripMenuItem
+            // 
+            this.backupDatabaseToolStripMenuItem.Name = "backupDatabaseToolStripMenuItem";
+            this.backupDatabaseToolStripMenuItem.Size = new System.Drawing.Size(250, 34);
+            this.backupDatabaseToolStripMenuItem.Text = "Backup Database";
+            // 
+            // servicesToolStripMenuItem
+            // 
+            this.servicesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addServiceToolStripMenuItem,
+            this.removeServiceToolStripMenuItem});
+            this.servicesToolStripMenuItem.Name = "servicesToolStripMenuItem";
+            this.servicesToolStripMenuItem.Size = new System.Drawing.Size(91, 83);
+            this.servicesToolStripMenuItem.Text = "Services";
+            // 
+            // addServiceToolStripMenuItem
+            // 
+            this.addServiceToolStripMenuItem.Name = "addServiceToolStripMenuItem";
+            this.addServiceToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.addServiceToolStripMenuItem.Text = "Add Service";
+            this.addServiceToolStripMenuItem.Click += new System.EventHandler(this.addServiceToolStripMenuItem_Click);
+            // 
+            // removeServiceToolStripMenuItem
+            // 
+            this.removeServiceToolStripMenuItem.Name = "removeServiceToolStripMenuItem";
+            this.removeServiceToolStripMenuItem.Size = new System.Drawing.Size(238, 34);
+            this.removeServiceToolStripMenuItem.Text = "Remove Service";
+            // 
+            // messagesToolStripMenuItem
+            // 
+            this.messagesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sendMessageToolStripMenuItem,
+            this.inboxToolStripMenuItem});
+            this.messagesToolStripMenuItem.Name = "messagesToolStripMenuItem";
+            this.messagesToolStripMenuItem.Size = new System.Drawing.Size(106, 83);
+            this.messagesToolStripMenuItem.Text = "Messages";
+            // 
+            // sendMessageToolStripMenuItem
+            // 
+            this.sendMessageToolStripMenuItem.Name = "sendMessageToolStripMenuItem";
+            this.sendMessageToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.sendMessageToolStripMenuItem.Text = "Send Message";
+            this.sendMessageToolStripMenuItem.Click += new System.EventHandler(this.sendMessageToolStripMenuItem_Click);
+            // 
+            // inboxToolStripMenuItem
+            // 
+            this.inboxToolStripMenuItem.Name = "inboxToolStripMenuItem";
+            this.inboxToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.inboxToolStripMenuItem.Text = "Inbox";
+            this.inboxToolStripMenuItem.Click += new System.EventHandler(this.inboxToolStripMenuItem_Click);
+            // 
+            // bookingsToolStripMenuItem
+            // 
+            this.bookingsToolStripMenuItem.Name = "bookingsToolStripMenuItem";
+            this.bookingsToolStripMenuItem.Size = new System.Drawing.Size(102, 83);
+            this.bookingsToolStripMenuItem.Text = "Bookings";
+            this.bookingsToolStripMenuItem.Click += new System.EventHandler(this.bookingsToolStripMenuItem_Click);
+            // 
+            // roleComboBox
+            // 
+            this.roleComboBox.FormattingEnabled = true;
+            this.roleComboBox.Items.AddRange(new object[] {
+            "Employer",
+            "Admin",
+            "Traveller"});
+            this.roleComboBox.Location = new System.Drawing.Point(380, 443);
+            this.roleComboBox.Name = "roleComboBox";
+            this.roleComboBox.Size = new System.Drawing.Size(244, 28);
+            this.roleComboBox.TabIndex = 84;
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(957, 574);
-            this.Controls.Add(this.button11);
+            this.Controls.Add(this.roleComboBox);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.textBox7);
@@ -429,35 +493,20 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Managment";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.Form3_Load);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox7;
@@ -479,6 +528,25 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageProfilesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem destinationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageCategoriesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem flightsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem postUpcomingFlightsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manageBookingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem systemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backupDatabaseToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem servicesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addServiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeServiceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem messagesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sendMessageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inboxToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bookingsToolStripMenuItem;
+        private System.Windows.Forms.ComboBox roleComboBox;
     }
 }

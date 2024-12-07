@@ -126,5 +126,30 @@ namespace TravelBookingApp
         {
             new MessagesListAdmin().Show();
         }
+
+        private void postUpcomingFlightsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FlightManagment().Show();
+        }
+
+        private void systemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addServiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new ServiceManagmentAdmin() .Show();
+        }
+
+        private void sendMessageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Message().Show();
+        }
+
+        private void inboxToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new MessagesListAdmin().Show();
+        }
     }
 }

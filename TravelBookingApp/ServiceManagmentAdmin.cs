@@ -46,5 +46,40 @@ namespace TravelBookingApp
         {
 
         }
+
+        private void assignRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manageProfilesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new UserManagmentListAdmin().Show();    
+        }
+
+        private void manageCategoriesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new DestinationManagment().Show();
+        }
+
+        private void postUpcomingFlightsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new FlightManagment().Show();
+        }
+
+        private void addServiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new ServiceManagmentAdmin().Show();
+        }
+
+        private void sendMessageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Message().Show();
+        }
+
+        private void bookingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new BookingManagment().Show();  
+        }
     }
 }
