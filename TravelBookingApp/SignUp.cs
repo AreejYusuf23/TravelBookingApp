@@ -29,12 +29,33 @@ namespace TravelBookingApp
 
         private void button1_Click(object sender, EventArgs e)
         {
+          
+        }
+
+        private int GenerateNewUserId(SqlConnection conn)
+        {
+            string query = "SELECT ISNULL(MAX(user_id), 0) + 1 FROM [User_1]";
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
+
+        private void passwordTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
             // Collect user input
             string firstName = firstNameTextBox.Text.Trim();
             string lastName = lastNameTextBox.Text.Trim();
             string email = emailTextBox.Text.Trim();
             string username = usernameTextBox.Text.Trim();
             string phone = phoneTextBox.Text.Trim();
+            string password = passwordTextBox.Text.Trim();
+
             string selectedRole = roleComboBox.SelectedItem?.ToString();
 
             // Validate required fields
@@ -80,6 +101,14 @@ namespace TravelBookingApp
                 return;
             }
 
+            if (string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Password is required.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                passwordTextBox.Focus();
+                return;
+            }
+
+
             // Database connection string
             string connectionString = "Data Source=DESKTOP-4O6DI2B\\SQLSERVER2022;Initial Catalog=AirLine;Persist Security Info=True;User ID=sa;Password=33420211;TrustServerCertificate=True";
 
@@ -122,6 +151,20 @@ namespace TravelBookingApp
 
                     cmd.ExecuteNonQuery();
 
+
+
+                    // Insert into Account table
+                    string insertAccountQuery = @"
+                        INSERT INTO [Account] (account_id, date_created, status, password, user_id)
+                        VALUES (@AccountId, GETDATE(), 'Active', @Password, @UserId);";
+
+                    SqlCommand accountCmd = new SqlCommand(insertAccountQuery, conn);
+                    accountCmd.Parameters.AddWithValue("@AccountId", newUserId); // Assuming account_id matches user_id
+                    accountCmd.Parameters.AddWithValue("@Password", password);
+                    accountCmd.Parameters.AddWithValue("@UserId", newUserId);
+
+                    accountCmd.ExecuteNonQuery(); // Execute account insert query
+
                     // Show success message
                     MessageBox.Show($"User created successfully!\nRole: {selectedRole}\nID: {newUserId}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -151,7 +194,7 @@ namespace TravelBookingApp
             }
             else if (role == "Employer")
             {
-               new EmployerDashboard().Show();
+                new EmployerDashboard().Show();
             }
             else if (role == "Traveler")
             {
@@ -160,15 +203,6 @@ namespace TravelBookingApp
 
             // Close the current form
             this.Hide();
-        }
-
-        private int GenerateNewUserId(SqlConnection conn)
-        {
-            string query = "SELECT ISNULL(MAX(user_id), 0) + 1 FROM [User_1]";
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                return Convert.ToInt32(cmd.ExecuteScalar());
-            }
         }
     }
 }

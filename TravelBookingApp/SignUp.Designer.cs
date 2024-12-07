@@ -60,7 +60,6 @@
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "First Name";
-         //   this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -111,7 +110,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Sign Up";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // firstNameTextBox
             // 
@@ -216,7 +215,6 @@
             this.button2.TabIndex = 17;
             this.button2.Text = "Cancel";
             this.button2.UseVisualStyleBackColor = true;
-          //  this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // roleComboBox
             // 
@@ -225,7 +223,6 @@
             this.roleComboBox.Name = "roleComboBox";
             this.roleComboBox.Size = new System.Drawing.Size(200, 28);
             this.roleComboBox.TabIndex = 19;
-           // this.roleComboBox.SelectedIndexChanged += new System.EventHandler(this.roleComboBox_SelectedIndexChanged);
             // 
             // Password
             // 
@@ -242,6 +239,7 @@
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Size = new System.Drawing.Size(100, 26);
             this.passwordTextBox.TabIndex = 21;
+            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
             // SignUp
             // 
